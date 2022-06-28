@@ -3,7 +3,7 @@ import { withRouter } from 'react-router-dom';
 
 function EditAccount(props) {
     const [account, setAccount] = useState(
-        props.accounts.find(acc => acc.id == props.match.params.id)
+        props.accounts.find(acc => acc.id === Number(props.match.params.id))
     );
 
     const editAccout = () => {
